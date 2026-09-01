@@ -1,0 +1,84 @@
+*{
+  margin:0;
+  padding:0;
+}
+
+                                           /*NavBar Starting*/
+
+/*nav heads*/
+#top-bar{
+  width:100%;
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  color:white;
+  background-color:rgb(17, 17, 17);
+  height:2rem;
+  box-shadow:1px 1px 3px 7px gray;
+}        
+
+#info{
+  width:85%;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      /*effect*/
+  scale:1;
+  transition:all 1s linear;
+  @starting-style{
+    scale:0;
+  }
+}
+
+#social{
+  width:15%;
+}
+
+#info span, #social span{
+  margin-left:5%;
+}
+
+#info span:hover, #social span:hover{
+  cursor:pointer;
+  color:aqua;
+  transition:0.4s;
+}
+
+/*Nav Body*/
+#navbar{
+  margin-top:0.2%;
+  height:5rem;
+  width:100%;
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  background-image:linear-gradient(#041B3E,#072c64,#041B3E);
+  color:white;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight:600;
+}
+
+#nav-links{
+  display:flex;
+  align-items:center;
+  list-style:none;
+    width:60%;
+    gap:7%;
+}
+
+#nav-links li:hover{
+cursor:pointer;
+color:tomato;
+transition:0.4s;
+}
+
+#navbar div span{
+color:aqua;
+}
+
+#navbar div:hover:not(#navbar div span){
+  cursor:pointer;
+  color:tomato;
+  transition:0.4s;
+}
+
+
+                                           /*NavBar Ending*/
