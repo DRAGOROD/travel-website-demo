@@ -95,6 +95,18 @@ useEffect(()=>{
      slides.forEach((slide)=>observer.observe(slide))
 },[]);
 
+/*Current Month */
+let date=new Date();
+let currentMonth=date.toLocaleDateString("en-US",{month:"long"})
+
+/*Next Month */
+let nextDate=new Date(date.getFullYear(),date.getMonth()+1)
+let nextMonth=nextDate.toLocaleDateString("en-US",{month:"long"})
+
+/*Next next Month*/
+let newDate=new Date(date.getFullYear(),date.getMonth()+2)
+let nextNextMonth=newDate.toLocaleDateString("en-US",{month:"long"})
+
 return (
     <>
      <div id="hero-container">
@@ -109,7 +121,16 @@ return (
                 <div><span className="herobtn-cover">Explore Now</span></div>
             </div>)}
         </div>
-     </div>
+         <div id="recent-container">
+             <div id="date-slider-container">
+                <div className='recent-cards'>
+                <span className='seat-txt'>Seats Available ||</span><span className='recent-tour-names'> GUJRAT</span><span>-  09th {currentMonth}</span>|<span className='recent-tour-names'> RAJASTHAN</span><span> - 21th {currentMonth}</span>
+                <span className='seat-txt'>Seats Available ||</span><span className='recent-tour-names'> DUARS</span><span>-  13th {nextMonth}</span>|<span className='recent-tour-names'> KASHMIR</span><span> - 23th {nextMonth}</span>
+                <span className='seat-txt'>Seats Available ||</span><span className='recent-tour-names'> UTTRAKHAND</span><span>-  17th {nextNextMonth}</span>|<span className='recent-tour-names'> KERALA</span><span> - 29th {nextNextMonth}</span>
+                </div> 
+             </div>
+          </div>
+        </div>
     </>
 )
 

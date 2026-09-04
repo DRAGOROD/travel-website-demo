@@ -177,9 +177,9 @@ color:aqua;
 }
 
 .points li{
-  color:yellow;
+  color:white;
   font-size:2rem;
-  font-family:'RanchoDeluxe', cursive;;
+  font-family:'RanchoDeluxe', cursive;
   background-color: rgba(12, 66, 87, 0.308);
   backdrop-filter: blur(8px);
   border-radius: 1rem;
@@ -250,5 +250,54 @@ color:aqua;
   cursor: pointer;
   transition:1s ease;
   width:100%;
+}
+
+/*Hero Recent Tour Section*/
+#recent-container{
+  margin-top: 2rem;
+  background-color: rgb(234, 237, 241);
+}
+
+
+#date-slider-container {
+  width: 75%;
+  height: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  font-size: 2rem;
+  overflow: hidden;
+}
+
+.recent-cards {
+  flex: 0 0 100%;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  animation: infinity-slide 60s infinite;
+}
+
+@keyframes infinity-slide {
+  from {
+    transform: translateX(20%);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.seat-txt{
+  color:#072c64;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bolder;
+}
+
+.recent-tour-names{
+  font-family:'RanchoDeluxe', cursive;
+  font-weight: bolder;
 }
                                            /*Hero Section Ending*/
