@@ -141,8 +141,9 @@ color:aqua;
 
 /*Hero Texts*/
 .name{
-  color:yellow;
+  color:white;
   text-align: center;
+  font-family:'Teja', cursive;;
   font-size:5rem;
   position:absolute;
   background-color: rgba(12, 66, 87, 0.308);
@@ -168,7 +169,7 @@ color:aqua;
 .points:not(.herobtn-cover){
   position:absolute;
   z-index:99;
-  top:30%;
+  top:27%;
   left:20%;
   transform:translateX(-50%);
   opacity: 1;
@@ -178,6 +179,7 @@ color:aqua;
 .points li{
   color:yellow;
   font-size:2rem;
+  font-family:'RanchoDeluxe', cursive;;
   background-color: rgba(12, 66, 87, 0.308);
   backdrop-filter: blur(8px);
   border-radius: 1rem;
