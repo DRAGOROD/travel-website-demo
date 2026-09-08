@@ -16,6 +16,9 @@ import J_i from './assets/j_i.mp4'
 import S_i from './assets/s_i.mp4'
 import T_i from './assets/t_i.mp4'
 
+/*card symbols*/
+import L_s from './assets/locationSymbol.webp'
+import SL_s from './assets/subLocationSymbol.webp'
 
 function Packages(){
 
@@ -118,7 +121,7 @@ const tours = [
     tabName:"International",
     destinations: [
       {
-        name: "Bali, Indonesia",
+        name: "Indonesia",
         picture: B_i,
         costPerPerson: 45000,
         days: 6,
@@ -226,10 +229,10 @@ let activeTab=tours.find(v=>v.tabId===activeId);
              {activeTab && (activeTab.destinations.map((v,i)=>(
                 <div key={i} className="package-cards">
                     <video src={v.picture} loop/>
-                    <p>⏳️ {v.days} Days/{v.days-1} Night</p>
-                    <h5>📍 {v.name}</h5>
-                    <p>💵 ₹ {v.costPerPerson}</p>
-                    <p>🚘 {v.places.join(", ")}</p>
+                    <p className="duration">⏳️ {v.days} D / {v.days-1} N</p>
+                    <h5><img src={L_s} className="card-symbol"/> {v.name}</h5>
+                    <p className="places"><img src={SL_s} className="card-symbol"/>{v.places.join(", ")}</p>
+                    <p className="cost">₹ {v.costPerPerson}</p>
                 </div>
              )))}
            </div>

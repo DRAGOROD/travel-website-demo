@@ -347,29 +347,78 @@ color:aqua;
 
 #packages-body{
   width:80%;
-  outline:solid 2px red;
   margin-left: auto;
   margin-right: auto;
   display: flex;
   flex-wrap: wrap;
+  gap:1.5rem;
 }
 
 .package-cards{
   margin-left: auto;
   margin-right: auto;
-  width:35%;
-    outline:solid 2px red;
+  width:30%;
+  position:relative;
+  border-radius: 2rem;
+  background-color:rgb(240, 238, 238);
+  border:1px solid rgba(128, 128, 128, 0.151);
+}
+
+.package-cards:hover{
+  cursor: pointer;
+  transition: 0.4s;
+  transform: translateY(-2%);
+  box-shadow: 1px 1px 8px 2px gray;
 }
 
 .package-cards video{
- width:70%;
+ width:100%;
+ border-radius: 2rem;
 }
 
+.package-cards h5{
+font-size: x-large;
+font-family: 'ChanceryScriptLightSSiLightItalic', cursive;
+font-weight: bolder;
+margin-bottom: 2rem;
+color:#072c64;
+display: flex;
+align-items: center;
+justify-content: center;
+}
 
+.package-cards p:not(.duration,.cost){
+ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ font-weight: bolder;
+ margin-bottom: 1rem;
+ color:rgb(99, 98, 98);
+}
 
+.duration{
+  position: absolute;
+  left:2%;
+  top:36%;
+  padding:0.5rem;
+  background-color: #041b3e31;
+  backdrop-filter: blur(15px);
+  color:white;
+  border-radius: 1rem;
+}
 
+.places{
+  margin-left: auto;
+  margin-right: auto;
+  width:70%;
+  display: flex;
+  align-items: center;
+}
 
-
+.cost{
+  font-size: xx-large;
+  color:orangered;
+ font-family: 'ScriptaBookPro', cursive;
+ font-weight: bold;
+}
 
 
                                            /*Packages Section Ending*/
