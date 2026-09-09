@@ -210,6 +210,7 @@ const tours = [
 let [activeId,setActiveId]=useState("all")
 let [visible,setVisible]=useState(true)
 
+/*setting tabs */
 function handleClick(id){
     if(activeId===id) return;
     setVisible(false)
@@ -218,23 +219,34 @@ setTimeout(()=>{
     setVisible(true)},100)
 }
 
+let allDestinations=tours.flatMap(tour=>tour.destinations)
 let activeTab=tours.find(v=>v.tabId===activeId);
+
     return(
         <div id="packages_container">
            <div id="packages-head">
-              <span id="all" onClick={()=>setActiveId("all")}><span className="tab-symbol">🌏︎</span> All</span>
-              {tours.map((v,i)=>(<span key={i} onClick={()=>handleClick(v.tabId)}><span className="tab-symbol">{v.tabSymbol}</span> {v.tabName}</span>))}
+              <span id="all" onClick={()=>setActiveId("all")} style={activeId==="all"?{boxShadow:"2px 0px 0px 6px aqua",color:"aqua"}:{}}><span className="tab-symbol">🌏︎</span> All</span>
+              {tours.map((v,i)=>(<span key={i} onClick={()=>handleClick(v.tabId)} style={v.tabId===activeId?{boxShadow:"2px 0px 0px 6px aqua",color:"aqua"}:{}}><span className="tab-symbol">{v.tabSymbol}</span> {v.tabName}</span>))}
+              <span><span className="tab-symbol">☼</span> Customized</span>
            </div>
            <div id="packages-body">
-             {activeTab && (activeTab.destinations.map((v,i)=>(
-                <div key={i} className="package-cards">
+            {activeId==="all" ? (allDestinations.map((v,i)=>(
+              <div key={i} className="package-cards" onMouseOver={(x)=>x.currentTarget.querySelector("video").play()} onMouseOut={(x)=>{x.currentTarget.querySelector("video").pause();x.currentTarget.querySelector("video").currentTime=0}}>
                     <video src={v.picture} loop/>
                     <p className="duration">⏳️ {v.days} D / {v.days-1} N</p>
                     <h5><img src={L_s} className="card-symbol"/> {v.name}</h5>
                     <p className="places"><img src={SL_s} className="card-symbol"/>{v.places.join(", ")}</p>
                     <p className="cost">₹ {v.costPerPerson}</p>
                 </div>
-             )))}
+            ))): activeTab.destinations.map((v,i)=>(
+                <div key={i} className="package-cards" onMouseOver={(x)=>x.currentTarget.querySelector("video").play()} onMouseOut={(x)=>{x.currentTarget.querySelector("video").pause();x.currentTarget.querySelector("video").currentTime=0}}>
+                    <video src={v.picture} loop/>
+                    <p className="duration">⏳️ {v.days} D / {v.days-1} N</p>
+                    <h5><img src={L_s} className="card-symbol"/> {v.name}</h5>
+                    <p className="places"><img src={SL_s} className="card-symbol"/>{v.places.join(", ")}</p>
+                    <p className="cost">₹ {v.costPerPerson}</p>
+                </div>
+             ))} 
            </div>
         </div>
     )
