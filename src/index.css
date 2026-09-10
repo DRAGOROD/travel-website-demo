@@ -597,7 +597,8 @@ transition:0.4s ease;
 
 
 #otherServices-container{
-  margin-bottom: 50rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
   width:100%;
 }       
 
