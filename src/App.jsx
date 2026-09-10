@@ -1,6 +1,7 @@
 import Navbar from './navbar'
 import Hero from './hero'
 import Packages from './packages'
+import Other from './other'
 
 function App() {
 
@@ -9,6 +10,7 @@ function App() {
     <Navbar/>
     <Hero/>
     <Packages/>
+    <Other/>
     </>
   )
 }

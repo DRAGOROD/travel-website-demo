@@ -317,7 +317,6 @@ color:aqua;
 #packages_container{
   width:100%;
   margin-top: 4rem;
-  margin-bottom: 50rem;
   text-align: center;
 }                                           
 
@@ -549,9 +548,14 @@ color:gray;
 }
 
 #submit-btn{
-  border-radius: 0.5rem;
   width:7%;
+}
+
+#submit-btn span{
   background-color: orangered;
+  height:100%;
+  width:100%;
+  border-radius: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -559,7 +563,7 @@ color:gray;
   font-weight: bold;
 }
 
-#submit-btn:hover{
+#submit-btn span:hover{
 background-color: rgb(151, 42, 3);
 transition:0.4s ease;
 }
@@ -567,7 +571,6 @@ transition:0.4s ease;
 #custome-form input:hover,#custome-form select:hover,#submit-btn:hover{
   cursor: pointer;
 }
-
 
 /*See All Btn*/
 #see-all-btn{
@@ -586,4 +589,131 @@ transition:0.4s ease;
   cursor: pointer;
 }
 
+
                                            /*Packages Section Ending*/
+
+
+                                           /*Other Services Section Starting*/
+
+
+#otherServices-container{
+  margin-bottom: 50rem;
+  width:100%;
+}       
+
+#otherServices-heading{
+    font-size: 4rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  color:#041B3E;
+  text-align: center;
+}
+
+/*Other Services Body*/
+#otherServices-body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:2rem;
+}
+
+.services-card{
+  width:17%;
+  text-align: left;
+  list-style-position: inside;
+  background-image: linear-gradient(60deg,rgb(204, 202, 202),white,rgb(204, 202, 202));
+  /*box-shadow:1px 1px 4px 2px rgba(128, 128, 128, 0.151);*/
+  border-radius: 2rem;
+}
+
+.services-card video{
+  width:100%;
+}
+
+.services-card h6{
+  font-size: x-large;
+  text-align: center;
+  height:3rem;
+  width:85%;
+  margin: auto;
+  margin-bottom: 2rem;
+  border-bottom: 1px #041b3e4f solid;
+  font-family: 'ChanceryScriptLightSSiLightItalic', cursive;
+  color:#072c64;
+}
+
+.services-card li{
+  margin: auto;
+  margin-bottom: 3%;
+  width:85%;
+  font-family: 'ScriptaBookPro', cursive;
+  font-size: small;
+  list-style-type: "✦";
+}
+
+.services-card li:last-of-type{
+    border-bottom: 1px #041b3e4f solid;
+    height:3rem;
+}
+
+.services-card div{
+ margin-top: 15%;
+ margin-bottom: 5%;
+ width:60%;
+ margin-left: 30%;
+ display: flex;
+ align-items: center;
+ justify-content:space-around;
+ background-color:#072c64;
+ color:white;
+ height:2.5rem;
+ border-radius:0.5rem;
+ position: relative;
+}
+
+.services-card div::after{
+  content: attr(data-tooltip);
+  opacity: 0;
+  position: absolute;
+  top:-90%;
+  right:0;
+  color:aqua;
+  background-color: rgb(32, 32, 32);
+  padding:0.5rem;
+  border-radius: 2rem;;
+}
+
+.services-card div:hover::after{
+opacity: 1;
+transition: 0.4s ease;
+}
+
+.services-card div:hover{
+  cursor: pointer;
+}
+
+
+
+.services-card div span{
+background-color: white;
+padding:5%;
+color:black;
+border-radius: 0.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                          /*Other Services Section Endting*/
