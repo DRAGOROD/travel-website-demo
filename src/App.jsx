@@ -2,6 +2,7 @@ import Navbar from './navbar'
 import Hero from './hero'
 import Packages from './packages'
 import Other from './other'
+import Memories from './memories'
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
     <Hero/>
     <Packages/>
     <Other/>
+    <Memories/>
     </>
   )
 }
