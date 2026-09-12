@@ -44,17 +44,17 @@ return ()=>observer.disconnect()
 
 return (
     <div id="count-container" ref={countSecRef}>
-       <div>
+       <div className="scroll-animation">
         <span><img src={D_c} alt="Destination Image"/></span>
         <span>{destinationCount}+</span>
         <span>Destinations</span>
       </div>
-       <div>
+       <div className="scroll-animation">
         <span><img src={P_c} alt="Packages Image"/></span>
         <span>{packagesCount}+</span>
         <span>Packages</span>
        </div>
-       <div>
+       <div className="scroll-animation">
         <span><img src={C_c} alt="Clients Image"/></span>
         <span>{clientCount}+</span>
         <span>Clients</span>

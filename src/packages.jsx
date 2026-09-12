@@ -226,13 +226,13 @@ let activeTab=tours.find(v=>v.tabId===activeId);
 
     return(
         <div id="packages_container">
-           <h3 id="packages-heading">Our Packages</h3>
-           <div id="packages-head">
-              <span id="all" onClick={()=>{setActiveId("all");setShow(false)}} style={activeId==="all"?{boxShadow:"2px 0px 0px 6px aqua",color:"aqua"}:{}}><span className="tab-symbol">🌏︎</span> All</span>
-              {tours.map((v,i)=>(<span key={i} onClick={()=>handleClick(v.tabId)} style={v.tabId===activeId?{boxShadow:"2px 0px 0px 6px aqua",color:"aqua"}:{}}><span className="tab-symbol">{v.tabSymbol}</span> {v.tabName}</span>))}
-              <span onClick={()=>{setActiveId("customized");setShow(true)}} style={activeId==="customized"?{boxShadow:"2px 0px 0px 6px aqua",color:"aqua"}:{}}><span className="tab-symbol">☼</span> Customized</span>
+           <h3 id="packages-heading" className="scroll-animation">Our Packages</h3>
+           <div id="packages-head" className="scroll-animation">
+              <span id="all" className="scroll-animation" onClick={()=>{setActiveId("all");setShow(false)}} style={activeId==="all"?{boxShadow:"2px 0px 0px 6px aqua",color:"aqua"}:{}}><span className="tab-symbol">🌏︎</span> All</span>
+              {tours.map((v,i)=>(<span key={i} className="scroll-animation" onClick={()=>handleClick(v.tabId)} style={v.tabId===activeId?{boxShadow:"2px 0px 0px 6px aqua",color:"aqua"}:{}}><span className="tab-symbol">{v.tabSymbol}</span> {v.tabName}</span>))}
+              <span className="scroll-animation" onClick={()=>{setActiveId("customized");setShow(true)}} style={activeId==="customized"?{boxShadow:"2px 0px 0px 6px aqua",color:"aqua"}:{}}><span className="tab-symbol">☼</span> Customized</span>
            </div>
-           <div id="packages-body" style={activeId==="customized"?{height:'20rem'}:"all"?show?{height:'',overflow:''}:{height:'58.5rem',overflow:'hidden'}:{}}>
+           <div className="scroll-animation" id="packages-body" style={activeId==="customized"?{height:'20rem'}:"all"?show?{height:'',overflow:''}:{height:'58.5rem',overflow:'hidden'}:{}}>
             {activeId==="all" ? (allDestinations.map((v,i)=>(
               <div key={i} className={visible?"package-cards":""} onMouseOver={(x)=>x.currentTarget.querySelector("video").play()} onMouseOut={(x)=>{x.currentTarget.querySelector("video").pause();x.currentTarget.querySelector("video").currentTime=0}}>
                     <video src={v.picture} loop/>

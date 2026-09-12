@@ -1165,27 +1165,30 @@ flex-direction: column;
                                            /*Scroll Animation*/
 
 
-.scroll-animation{
-  animation-fill-mode:forwards;
-  animation-trigger: --on-enter view() entry 0 cover 40%;
-  animation-name: scroll-motion;
-  animation-duration:1s;
-  animation-timing-function: cubic-bezier(0.25,1,0.5,1);
+/*Scrolling Animation*/
+.scroll-animation {
+  animation-fill-mode: forwards;
+  timeline-trigger: --on-enter view() entry 0 cover 10% ;
+  animation-name: scroll-slide;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
   animation-trigger: --on-enter play-forwards none;
-}                                           
+}
 
-@keyframes scroll-motion{
-  from{
+@keyframes scroll-slide {
+  from {
     opacity: 0;
-    scale:0.4;
+    scale: 1;
     transform: translateY(100%);
   }
-  to{
+
+  to {
     opacity: 1;
-    scale:1;
+    scale: 1;
     transform: translateY(0);
   }
 }
+
 
 
 

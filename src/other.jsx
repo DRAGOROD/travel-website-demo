@@ -81,8 +81,8 @@ const otherServices = [
 
 return (
     <div id="otherServices-container">
-      <h3 id="otherServices-heading">Other Services</h3>
-      <div id="otherServices-body">
+      <h3 id="otherServices-heading" className="scroll-animation">Other Services</h3>
+      <div id="otherServices-body" className="scroll-animation">
         {otherServices.map((v,i)=>(
           <div className="services-card" onMouseOver={(x)=>x.currentTarget.querySelector("video").play()} onMouseOut={(x)=>{x.currentTarget.querySelector("video").pause(),x.currentTarget.querySelector("video").currentTime=0}}>
             <video src={v.icon} loop/>

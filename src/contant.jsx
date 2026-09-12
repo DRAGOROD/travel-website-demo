@@ -42,11 +42,11 @@ setShow(show===id?null:id)
 
 
 return(
-    <div id="contact-container">
+    <div id="contact-container" className="scroll-animation">
         <h3>Reach Out To Us</h3>
        <div id="contact-body">
           <div id="faq-section">
-            <div id="top-section">
+            <div id="top-section" className="scroll-animation">
            {faqs.map((v,i)=>(
           <>
             <div onClick={()=>handleClick(v.id)} className="faq-question"><span>{v.question}</span><span style={show===v.id?{display:'inline-block',transform:`rotate(180deg)`,transition:`0.4s ease`,color:'aqua'}:{}}>▲</span></div>
@@ -54,12 +54,12 @@ return(
            </>
            ))} 
            </div>
-           <div id="bottom-section">
+           <div id="bottom-section" className="scroll-animation">
                 {icons.map((Icon,i)=><div key={i} data-message="Contact Us On WhatsApp"><Icon/></div>)}
            </div>
           </div>
           <div id="form-section">
-           <form id="contact-form">
+           <form id="contact-form" className="scroll-animation">
             <h5>Send Us a Message:</h5>
             <div>
                 <input type="text"/>

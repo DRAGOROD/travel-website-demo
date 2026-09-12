@@ -77,9 +77,9 @@ const memories = [
 
 return(
     <div id="gallery-container">
-       <h3 id="gallery-heading">Memories</h3> 
-       <div id="gallery-body">
-         {memories.map((v,i)=>(<div key={i} style={{'--rotate-n':`${v.rotate}deg`}} data-name={v.destination} id={v.id}><img src={v.picture} alt={v.destination}/></div>))}
+       <h3 id="gallery-heading" className="scroll-animation">Memories</h3> 
+       <div id="gallery-body" className="scroll-animation">
+         {memories.map((v,i)=>(<div  key={i} style={{'--rotate-n':`${v.rotate}deg`}} data-name={v.destination} id={v.id}><img src={v.picture} alt={v.destination}/></div>))}
        </div>
     </div>
 )
