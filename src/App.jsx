@@ -3,6 +3,7 @@ import Hero from './hero'
 import Packages from './packages'
 import Other from './other'
 import Memories from './memories'
+import Contact from './contant'
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
     <Packages/>
     <Other/>
     <Memories/>
+    <Contact/>
     </>
   )
 }

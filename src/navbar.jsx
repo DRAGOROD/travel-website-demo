@@ -1,10 +1,10 @@
 import react from 'react'
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaYoutube, FaGoogle } from 'react-icons/fa'
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaYoutube, FaGoogle, FaWhatsapp } from 'react-icons/fa'
 import Logo from './assets/logo.webp'
 
 function Navbar() {
 
-let socialIcons = [FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaYoutube, FaGoogle]    
+let socialIcons = [FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaYoutube, FaGoogle, FaWhatsapp]    
 
 return(
     <>
