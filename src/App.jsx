@@ -5,6 +5,7 @@ import Other from './other'
 import Memories from './memories'
 import Contact from './contant'
 import Footer from './footer'
+import Count from './count'
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
     <Hero/>
     <Packages/>
     <Other/>
+    <Count/>
     <Memories/>
     <Contact/>
     <Footer/>
