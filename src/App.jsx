@@ -4,6 +4,7 @@ import Packages from './packages'
 import Other from './other'
 import Memories from './memories'
 import Contact from './contant'
+import Footer from './footer'
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
     <Other/>
     <Memories/>
     <Contact/>
+    <Footer/>
     </>
   )
 }
