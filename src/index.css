@@ -639,7 +639,6 @@ transition:0.4s ease;
   margin: auto;
   margin-bottom: 2rem;
   border-bottom: 1px #041b3e4f solid;
-  font-family: 'ChanceryScriptLightSSiLightItalic', cursive;
   color:#072c64;
 }
 
@@ -648,7 +647,7 @@ transition:0.4s ease;
   margin-bottom: 3%;
   width:85%;
   font-family: 'ScriptaBookPro', cursive;
-  font-size: small;
+  font-size:large;
   list-style-type: "✦";
 }
 
