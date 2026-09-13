@@ -49,7 +49,7 @@ return (
             {socialLinks.map((v,i)=><p key={i} onMouseOver={(x)=>{x.currentTarget.querySelector("span").style.fontSize='larger',x.currentTarget.querySelector("span").style.color='aqua',x.currentTarget.querySelector("span").style.transition='0.4s ease'}}onMouseOut={(x)=>{x.currentTarget.querySelector("span").style.fontSize='',x.currentTarget.querySelector("span").style.color='white'}}><span><v.icon/></span> {v.name}</p>)}
         </div>
     </div>
-    <p id="copyright" className="scroll-animation">CopyRight &copy; 2026, Joy Misra- All Right Reserved</p>
+    <p id="copyright">CopyRight &copy; 2026, Joy Misra- All Right Reserved</p>
     </>
     )
 
