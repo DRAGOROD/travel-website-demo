@@ -143,7 +143,8 @@ color:aqua;
 .name{
   color:white;
   text-align: center;
-  font-family:'Teja', cursive;;
+  font-family:'Teja', cursive;
+  font-weight: bolder;
   font-size:5rem;
   position:absolute;
   background-color: rgba(12, 66, 87, 0.308);
@@ -639,6 +640,7 @@ transition:0.4s ease;
   margin: auto;
   margin-bottom: 2rem;
   border-bottom: 1px #041b3e4f solid;
+  font-family: 'ChanceryScriptLightSSiLightItalic', cursive;
   color:#072c64;
 }
 
@@ -646,8 +648,8 @@ transition:0.4s ease;
   margin: auto;
   margin-bottom: 3%;
   width:85%;
-  font-family: 'ScriptaBookPro', cursive;
-  font-size:large;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: small;
   list-style-type: "✦";
 }
 
@@ -659,8 +661,8 @@ transition:0.4s ease;
 .services-card div{
  margin-top: 15%;
  margin-bottom: 5%;
- width:60%;
- margin-left: 30%;
+ width:50%;
+ margin-left: 40%;
  display: flex;
  align-items: center;
  justify-content:space-around;
@@ -927,8 +929,7 @@ color:white;
 
 #contact-form div:nth-child(+6):hover{
   cursor: pointer;
- /*background-color: #041B3E;*/
- background-image: linear-gradient(-30deg,orangered,orange);
+  background-image: linear-gradient(-30deg,orangered,orange);
   transition: 0.4s ease;
 }
 
@@ -953,7 +954,7 @@ color:white;
   align-items:center;
   background-image:linear-gradient(#041B3E,#072c64,#041B3E);
   color:white;
-  font-family: 'ScriptaBookPro', cursive;
+  font-family:'Teja', cursive;
 }
 
 .faq-question:first-child{
@@ -977,10 +978,12 @@ font-size: x-large;
 .faq-answer{
   width:70%;
   margin: auto;
-  font-size: large;
+  font-size:small;
   margin-top: 0.5rem;
   line-height: 1.5rem;
   color:rgb(70, 69, 69);
+  font-weight: bolder;
+  font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
 /*Bottom Section*/
@@ -989,7 +992,7 @@ font-size: x-large;
 }
 
 #bottom-section div{
-    margin: auto;
+  margin: auto;
   width:30%;
   height:65%;
   border-radius: 2rem;

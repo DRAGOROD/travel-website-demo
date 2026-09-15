@@ -1,10 +1,14 @@
-import react from 'react'
+import react, { useContext } from 'react'
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaYoutube, FaGoogle, FaWhatsapp } from 'react-icons/fa'
 import Logo from './assets/logo.webp'
 
+import { contextRef } from './App'
+
 function Navbar() {
 
-let socialIcons = [FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaYoutube, FaGoogle, FaWhatsapp]    
+let socialIcons = [FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaYoutube, FaGoogle, FaWhatsapp]   
+
+let {homeRef,packagesRef,serviceRef,galleryRef,contactRef}=useContext(contextRef)
 
 return(
     <>
@@ -24,11 +28,11 @@ return(
     <div id="navbar">
         <img src={Logo} alt="Website Logo"/>
         <ul id="nav-links">
-            <li>🏠︎</li>
-            <li>Packages</li>
-            <li>Our Services</li>
-            <li>Gallary</li>
-            <li>Contact Us</li>
+            <li onClick={()=>homeRef.current.scrollIntoView({behavior:"smooth"})}>🏠︎</li>
+            <li onClick={()=>packagesRef.current.scrollIntoView({behavior:"smooth"})}>Packages</li>
+            <li onClick={()=>serviceRef.current.scrollIntoView({behavior:"smooth"})}>Our Services</li>
+            <li onClick={()=>galleryRef.current.scrollIntoView({behavior:"smooth"})}>Gallary</li>
+            <li onClick={()=>contactRef.current.scrollIntoView({behavior:"smooth"})}>Contact Us</li>
         </ul>
         <div><span>➜]</span> Sign In/Register</div>
     </div>

@@ -22,7 +22,7 @@ let sliderClips = [
         ]
     },
     {   
-        name: "KASHMIR",
+        name: "KASHIR",
         src: Ks_Slide,
         places: [
             "Srinagar",
@@ -53,7 +53,6 @@ let sliderClips = [
             "Udaipur",
             "Mount Abu"
         ],
-        cta: "Book Now"
     },
     {
         name: "KERALA",
