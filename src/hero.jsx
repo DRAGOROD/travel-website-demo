@@ -22,7 +22,7 @@ let sliderClips = [
         ]
     },
     {   
-        name: "KASHIR",
+        name: "KASHMIR",
         src: Ks_Slide,
         places: [
             "Srinagar",
