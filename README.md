@@ -15,7 +15,6 @@ https://github.com/user-attachments/assets/f5fe55bc-0e39-4b27-b57f-f515630c7653
 ## ✨ Features
 - Domestic and international tour packages
 - Destination-based travel packages
-- Destination package details
 - Interactive package tabs
 - Hover-to-play destination videos
 - Automatic destination slideshow
@@ -50,7 +49,6 @@ https://github.com/user-attachments/assets/f5fe55bc-0e39-4b27-b57f-f515630c7653
 - Add currency conversion
 - Add wishlist/favourite destinations
 - Add user-generated travel memories
-- Add travel blogs
 - Add multi-language support
 - Add dark/light theme toggle
 - Add tablet-specific layouts
