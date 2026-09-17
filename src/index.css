@@ -101,7 +101,7 @@ color:aqua;
 }
 
 #slider-container .slide{
-  width:100%;
+  flex:0 0 100%;
   animation:slide 55s infinite;
 }
 
@@ -194,7 +194,6 @@ color:aqua;
   z-index:99;
   top:75%;
   left:75%;
-
   background-color: rgba(12, 66, 87, 0.308);
   backdrop-filter: blur(8px);
   border-radius: 2rem;
@@ -332,7 +331,6 @@ color:aqua;
 }
 
 #packages-head span:not(.tab-symbol){
-  padding:0.5rem;
   background-image:linear-gradient(#041B3E,#072c64,#041B3E);
   color:white;
   padding:1rem;
@@ -364,9 +362,9 @@ color:aqua;
 }
 
 #packages-body div:not(.form-div,#destination-input,#submit-btn){
-  margin-top: 1rem;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 1rem;
   width:30%;
   position:relative;
   border-radius: 2rem;
@@ -397,7 +395,6 @@ color:aqua;
 }
 
 
-
 #packages-body div:not(.form-div,#destination-input,#submit-btn):hover{
   cursor: pointer;
   transition: 0.4s;
@@ -405,12 +402,12 @@ color:aqua;
   box-shadow: 1px 1px 8px 2px gray;
 }
 
-#packages-body div video{
+#packages-body div:not(.form-div,#destination-input,#submit-btn) video{
  width:100%;
  border-radius: 2rem;
 }
 
-#packages-body div h5{
+#packages-body div:not(.form-div,#destination-input,#submit-btn) h5{
 font-size: x-large;
 font-family: 'ChanceryScriptLightSSiLightItalic', cursive;
 font-weight: bolder;
@@ -1234,11 +1231,255 @@ flex-direction: column;
 
 @media (max-width: 799px){
 
+ html,body{
+  width:100%;
+  overflow-x: hidden;
+ } 
+
 *{
   margin:0;
   padding:0;
+  box-sizing: border-box;
 }
 
+                                          /*NavBar*/
+
+#top-bar{
+  font-size: x-small;
+  box-shadow: none;
+}
+
+#social{
+  width:35%;
+}
+
+#navbar img{
+ display:none;
+}
+
+#navbar{
+  font-size: x-small;
+}
+
+
+                                          /*HERO*/
+
+#slider-container{
+height:12.8rem;
+}
+
+#slider-container .slide{
+  flex:0 0 100%;
+}
+
+#slider-container .slide video{
+  width:100%;
+object-fit: cover;
+}
+
+.name{
+  font-size: xx-large;
+}
+
+.points li{
+font-size: small;
+margin-top: 0.3rem;
+list-style: none;
+list-style:disc;
+}
+
+.points:not(.herobtn-cover){
+  top:30%;
+}
+
+.hero-btn{
+  width:22%;
+  left:70%;
+}
+
+.herobtn-cover{
+  font-size: x-small;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#date-slider-container {
+  height:2rem;
+}
+
+.recent-cards{
+  font-size: large;
+}
+
+                                      /*Packages*/
+
+#packages-heading{
+  margin-top: 2rem;
+  font-size: xx-large;
+}
+
+#packages_container{
+  margin-top: 3rem;
+}
+
+#packages-head{
+  width:100%;
+  gap:0.8rem;
+}
+
+#packages-head span:not(.tab-symbol){
+padding:0;
+font-size: small;
+padding:1rem 0.3rem;
+}
+
+#packages-body{
+  width:95%;
+  gap:0.3rem;
+}
+
+#packages-body div:not(.form-div,#destination-input,#submit-btn){
+  width:47%;
+}
+
+#packages-body div:not(.form-div,#destination-input,#submit-btn) h5{
+  font-size: x-large;
+  margin-bottom: 0.5rem;
+}
+
+.duration{
+  top:22%;
+  left:5%;
+  font-size: x-small;
+}
+
+.places{
+  font-size: x-small;
+}
+
+#custome-form{
+  flex-direction: column;
+  height:100%;
+  padding:2rem 0;
+}
+
+#custome-form div:not(#destination-input,#submit-btn){
+  width:80%;
+  margin-bottom: 2rem;
+}
+
+#destination-input{
+  width:60%;
+  margin-bottom: 2rem;
+}
+
+#submit-btn{
+  width:30%;
+}
+
+                                    /*Other Services*/
+
+#otherServices-heading{
+  margin-top: 5rem;
+  font-size: xx-large;
+}
+
+#otherServices-body{
+  flex-direction: column;
+}
+.services-card{
+  width:80%;
+}
+
+                                          /*Count*/
+
+#count-container{
+  margin-top: 0;
+  flex-direction: column;
+}  
+
+#count-container div{
+  margin-top: 1rem;
+}
+
+                                         /*Memories*/
+
+
+#gallery-heading{
+  font-size: xx-large;
+}                                     
+#gallery-body div::after{
+  width:80%;
+  left:40%;
+}
+
+#gallery-body div img:hover{
+  scale: 1.5;
+  
+}                                        
+
+                                         /*Contact*/
+
+#contact-container h3{
+  font-size: xx-large;
+}
+
+#contact-body{
+  flex-direction: column;
+}
+
+#form-section,#faq-section{
+  width:100%;
+}
+
+.faq-question{
+  width:100%;
+  font-size: small;
+  font-weight: bolder;
+}
+
+.faq-answer{
+  width: 90%;
+}
+
+#bottom-section div{
+  margin-top: 2rem;
+  font-size: 5rem;
+}
+
+#bottom-section div::after{
+  opacity: 1;
+  width:200%;
+  top:120%;
+}
+
+#bottom-section div:hover::after{
+  animation: none;
+}
+
+#contact-form{
+margin-top: 7rem;
+width:95%;
+}
+
+#contact-form div{
+  width:80%;
+}
+
+#contact-form div:nth-child(+6){
+  width:45%;
+}
+
+                                              /*Footer*/
+
+#footer-container div{
+  font-size: xx-small;
+}   
+
+#footer-container div a{
+  font-size: xx-small;
+}
 
 }
 
