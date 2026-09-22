@@ -112,7 +112,7 @@ return (
         <div id="slider-container" ref={containerRef}>
             {sliderClips.map((value,index)=>
             <div key={index} className="slide">
-                <video src={value.src} loop/>
+                <video src={value.src} loop controlsList='nodownload'/>
                 <h4>{value.name}</h4>
                 <span>
                 {value.places.map((v,i)=><li key={i}>{v}</li>)}
